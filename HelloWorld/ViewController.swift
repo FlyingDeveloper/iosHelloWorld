@@ -10,9 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var txtHelloRob: UILabel!
+    @IBOutlet weak var btnTapHere: UIButton!
+    @IBAction func tapHereEvent(sender: AnyObject) {
+        btnTapHere.setTitle("Tapped!"
+            , forState: UIControlState.Normal
+        )
+        txtHelloRob.text = "Tapped!"
+    }
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad();
         // Do any additional setup after loading the view, typically from a nib.
+        btnTapHere.setTitle("From code", forState: UIControlState.Normal)
     }
 
     override func didReceiveMemoryWarning() {
